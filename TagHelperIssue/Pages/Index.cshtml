@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form method="post">
+        <p>This is a form. @ViewData["Status"]</p>
+        <p><input asp-for="SomeValue" test-label="Say something:"></p>
+        <p><span test-label="Check:">Did you say something?</span></p>
+        <p><button type="submit">Submit</button></p>
+    </form>
+</div>
