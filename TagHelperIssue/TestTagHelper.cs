@@ -22,8 +22,8 @@ namespace TagHelperIssue
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             base.Process(context, output);
-            output.PreContent.SetHtmlContent($"<b>{WebUtility.HtmlEncode(Label)}</b> ");
-            output.PostContent.SetHtmlContent($" <i>({WebUtility.HtmlEncode(For.Name)})</i>"); // access information from the input tag
+            output.PreElement.SetHtmlContent($"<b>{WebUtility.HtmlEncode(Label)}</b> ");
+            output.PostElement.SetHtmlContent($" <i>({WebUtility.HtmlEncode(For.Name)})</i>"); // access information from the input tag
         }
     }
 }
